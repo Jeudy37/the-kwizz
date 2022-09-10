@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <style>
+    h1{
+        text-align: center;
+    }
+    input{
+        border-radius: 5px;
+    }
+    form{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .container-input{
+        margin-top: 30px;
+        border: 1px;
+    }
+    .antrenown,.antremodpas{
+        margin-top: 10px;
+        padding: 5px;
+    }
+    
+  </style>
+
+    
+    <form action="{% url 'kont' %}" method="post">
+        <h1>Kreye kont Form</h1>
+        {% csrf_token %}
+        <div class="container container-input">
+            <input type="text" id="nom" name="nom" placeholder="Antre nonw" class="antrenown"><br><br>
+            <input type="password" id="modpas" name="modpas" placeholder="Antre modpas ou" class="antremodpas">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Kreye</button>
+    </form>
+    {% endblock content %}

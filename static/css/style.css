@@ -1,0 +1,17 @@
+footer .main-footer{ 
+                padding: 20px 20px; 
+                background: #252525;  
+                overflow-y: hidden;}
+
+
+/* Copy Right Footer */
+.footer-copyright {
+     background: #222; 
+     padding: 10px 0; 
+     margin-top: 250px; 
+     overflow-y: hidden;}
+
+.footer-copyright p { color: #969696;
+                    margin: 2px 0 0;}
+
+

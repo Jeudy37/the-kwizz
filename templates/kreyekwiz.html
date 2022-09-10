@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <form action="" method="post">
+                {% csrf_token %}
+                <div class="row g-2">
+                    <h1>Kreye kesyon</h1>
+                    <div class="form-floating">
+                            {{form.as_p}}
+                            <br>
+                        <button type="submit" class="btn btn-primary mb-3">Kreye</button>  
+                    </div>
+                </div>    
+        </form>      
+ 
+ {% endblock content %}
+    

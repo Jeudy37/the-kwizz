@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<style>
+    .title{
+        text-align: center;
+        margin-top: 20px;
+    }
+    p{
+        margin: 100px;
+        text-align: center;
+    }
+    hr{
+        width: 50%;
+        text-align: auto;
+    }
+    .container-button{
+        text-align: center;
+        padding-right: 50px;
+        position: relative;
+    }
+    .konekte{
+        margin-right: 50px;
+    }
+    .enskri{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+</style>
+    <h1 class="title"> Byenvini  sou platform nou an </h1>
+    <center><hr></center>
+    <div>
+        {% if user.is_authenticated %}
+        <p>Depi 1996 nap lite nan lide poun fe tet timoun yo travay gras ak Platform QUIZ  an kolaborasyon avek <strong>Code9class</strong>  <br></p>
+        <p>Klike anle a siw pre</p>
+            {%else%}
+            <p> si'w se yon aplikan deja klike sou bouton <strong>konekte</strong> pouw ka we siw brain ou bon toujou,
+            oswa apiye sou bouton <strong>Enskri</strong> an pou w k benefisye de privilej sa</p>
+        
+    </div>
+    <div class="container-button">
+        <a href="{% url 'konekte' %}"><button class="btn btn-primary konekte">Konekte</button></a> 
+        <a href="{% url 'kont' %}"><button class="btn btn-primary enskri">Enskri</button></a>
+        {%endif%}
+    </div>
+{% endblock content %}
+      
+
+    
+
+
